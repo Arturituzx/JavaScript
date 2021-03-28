@@ -52,7 +52,35 @@ console.log(a);
 a %= 3;
 console.log(a);
 */
+const numbers = document.getElementById("numbers");
+const result = document.getElementById( "result")
+let a = prompt('Introduza numero 1:')
+let b = prompt('Introduza numero 2:')
+let c = prompt('Introduza numero 3:')
+a = parseInt(a);
+b = parseInt(b);
+c = parseInt(c);
+numbers.textContent = `Los número introducidos son ${a}, ${b} y ${c}.`
 
+if(a >= b && a>=c){
+    if(b>c){
+        result.textContent = `${c}, ${b}, ${a}`
+    }else{
+        result.textContent = `${b}, ${c}, ${a}`
+    }
+} else if(b>=a && b>=c){
+    if(a>=c){
+        result.textContent = `${c}, ${a}, ${b}`
+    }else{
+        result.textContent = `${a}, ${c}, ${b}`
+    }
+} else if(c>=a && c>=b){
+    if(a>=b){
+        result.textContent = `${b}, ${a}, ${c}`
+    }else{
+        result.textContent = `${a}, ${b}, ${c}`
+    }
+}
 
 
 
